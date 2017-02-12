@@ -20,16 +20,36 @@
 </head>
 
 <body>
+<header></header>
 
 
   <!-- Overall Grid -->
   <div class="container">
 
     <div class="row">
-      <h1>Hangman Game</h1>
+      <div class="col-md-12">
+        <h1>Hangman Game</h1>
+      </div>
+
     
     </div> <!-- end  row -->
     
+    <div class="row">
+      <div class="col-md-6 leftBox">
+        <div class="thumbnail">
+                    <img src="http://lorempixel.com/600/200/cats" alt="cat1">
+        </div>
+      </div>
+
+      <div class="col-md-6 rightBox">
+        <p>Press any key to get started.</p>
+        <ul id="letters"></ul>
+        <p id="numberOfLives">You have lives left</p>
+        <p id="output" class="output"></p>
+
+
+      </div>
+    </div>
 
   </div><!--  end of container -->
 

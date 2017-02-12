@@ -1,1 +1,10 @@
-h1 {color: pink;}
+h1 {color: pink;
+text-align: center;}
+
+p {font-size: 24px;
+	text-align: center;
+}
+
+.leftBox, .rightBox {border: 2px dashed pink;}
+
+.rightBox {border-left: none;}
