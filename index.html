@@ -4,10 +4,9 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Storino Hangman Game</title>
+  <title>Sight Words Hangman Game</title>
 
-  <!--   javascript -->
-  <script type="text/javascript" src="assets/javascript/game.js" type="text/javascript"></script>
+  
 
   <!-- Bootstrap stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -42,10 +41,11 @@
       </div>
 
       <div class="col-md-6 rightBox">
-        <p>Press any key to get started.</p>
-        <ul id="letters"></ul>
-        <p id="numberOfLives">You have lives left</p>
-        <p id="output" class="output"></p>
+        <p>Guesses Left: <span id="guesses-left"></span></p>
+        <p>Wrong Guesses: <span id="wrong-guesses"></span></p>
+        <p>Wins: <span id="win-counter"></span></p>
+        <p>Losses: <span id="loss-counter"></span></p>
+        <h3 id="word-blank"></h3>
 
 
       </div>
@@ -55,5 +55,8 @@
 
 
 </body>
+<!--   javascript -->
+ <script type="text/javascript" src="assets/javascript/game.js" type="text/javascript"></script>
 
 </html>
+

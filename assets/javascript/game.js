@@ -1,36 +1,74 @@
+// variable list 
+var wordList = [
+    "for",
+    "the",
+    "it",
+    "up",
+    "in",
+    "she"
+]
 
-// document.onkeyup = function (event) {
-//           console.log("you pressed the " + event.key + " key");
-//       }
-
-// array of words to use in Hangman
-
-// var words = ['cat', 'dog', 'frog', 'bunny'];
-
-// var wordsLength = words.length;
-
-// var wordsDashes = "";
-
-
-// for (var i = 0; i < wordsLength; i++) {
-
-// 	wordsDashes = words[i];
-// 	console.log(wordsDashes);
-// }
-
-// word list
-var words = ["cat", "dog", "cow", "reindeer"];
+var hangmanWord = "";
+var lettersInHangmanWord= [];
+var numBlanks = 0;
+var letterBlanks = [];
+var numGuesses = 10;
 
 
-// choose random word from list
+function startGame(){
+    // 1. select random word
+    hangmanWord = wordList[Math.floor(Math.random() * wordList.length)];
 
-var currentWord = words[Math.floor(Math.random() * words.length)];
+    console.log(hangmanWord);
 
-console.log(currentWord);
+    // 2. break up word into letters
 
-// lives
-var lives = 5;
-console.log (lives);
+    lettersInHangmanWord = hangmanWord.split("");
 
-var numberOfLives = document.getElementById("numberOfLives");
-numberOfLives.innerHTML = "You have " + lives + "lives left";
+    console.log(lettersInHangmanWord);
+
+    // 3. replace letters with spaces by figuring out the number of spaces
+
+    numBlanks = lettersInHangmanWord.length;
+
+    console.log(numBlanks);
+
+    // 4. add spaces for blanks in html
+
+    for(var i = 0; i < numBlanks; i++){
+            letterBlanks.push("_ ");
+        }
+
+    console.log(letterBlanks);
+
+    document.getElementById('word-blank').innerHTML = letterBlanks.join(" ");
+        // why is this necessary / why does it take away the comma?
+
+    document.getElementById('guesses-left').innerHTML = numGuesses;
+
+}
+
+// take in the letter typed
+
+document.onkeyup = function(letterTyped){
+    
+    var letterGuessed = String.fromCharCode(letterTyped.keyCode);
+    
+    console.log("this is the letter I typed", letterGuessed);
+
+ // compare against letter in the word
+
+    for (var i = 0; i < lettersInHangmanWord.length; i++) {
+        if (letterGuessed === lettersInHangmanWord[i]){
+            console.log("this is a letter in the word");
+        } else {
+            console.log("this is not a letter in the word");
+        }
+    }
+    
+}
+
+// compare letter typed to letters in word
+
+
+startGame();
