@@ -52,7 +52,7 @@ function startGame(){
 
 document.onkeyup = function(letterTyped){
     
-    var letterGuessed = String.fromCharCode(letterTyped.keyCode);
+    var letterGuessed = String.fromCharCode(letterTyped.keyCode).toLowerCase();
     
     console.log("this is the letter I typed", letterGuessed);
 
