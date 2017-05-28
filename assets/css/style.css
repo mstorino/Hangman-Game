@@ -21,3 +21,17 @@ p {font-size: 24px;
 .jumbotron {
 	background-color: #ffffff;
 }
+
+/* The animation code */
+@keyframes slideRight {
+    from {transform: translate3d(0, 0, 0);}
+    to {visibility:hidden;
+    	transform: translate3d(100%, 0, 0)}
+}
+
+/* The element to apply the animation to */
+.slideOutRight {
+   
+    animation-name: slideRight;
+    animation-duration: 20s;
+}
