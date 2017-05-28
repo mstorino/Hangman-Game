@@ -2,9 +2,22 @@ h1 {color: pink;
 text-align: center;}
 
 p {font-size: 24px;
-	text-align: center;
+	
 }
 
-.leftBox, .rightBox {border: 2px dashed pink;}
+#word-blank {
+	font-size: 70px;
+}
 
-.rightBox {border-left: none;}
+.rightBox{
+	padding-left: 40px;
+}
+
+.tomato {
+	color: tomato;
+	text-transform: uppercase;
+}
+
+.jumbotron {
+	background-color: #ffffff;
+}
